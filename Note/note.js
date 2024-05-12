@@ -6,7 +6,18 @@ const champResult = document.getElementById("champResult");
 generateurNote = (event) => {
   event.preventDefault();
 
-  console.log("BONJOUR GALA");
+  const textInput = champInput.value;
+  // console.log(textInput);
+
+  if (textInput === "") {
+    alert("Veuillez entrer des données dans le champ.");
+  }
+
+  champResult.textContent = textInput;
+
+  console.log(champResult);
+
+  champInput.value = "";
 };
 
 buttonAjouter.addEventListener("click", generateurNote);
