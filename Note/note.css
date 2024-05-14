@@ -1,0 +1,50 @@
+h1 {
+  text-align: center;
+}
+#monForm {
+  text-align: center;
+}
+
+#champResult {
+  padding-top: 100px;
+}
+
+
+
+/*NOTE - Class pour Styliser les Boutons partir de JavaScript   */
+
+.button {
+  background-color: #2d7eda; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+  border: none; /* Supprimer la bordure */
+  cursor: pointer; /* Curseur de la souris au survol */
+  border-radius: 5px; /* Bordure arrondie */
+  margin-right: 5px; /* Marge à droite pour les boutons adjacents */
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
