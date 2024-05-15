@@ -21,10 +21,16 @@ h1 {
   cursor: pointer; /* Curseur de la souris au survol */
   border-radius: 5px; /* Bordure arrondie */
   margin-right: 5px; /* Marge à droite pour les boutons adjacents */
+
+  transition-duration: 0.50s;
+
+  border: 2px solid #0415aa;
 }
 
 .button:hover {
-  background-color: #0056b3;
+ /* background-color: #0056b3; */
+ background-color: white;
+ color: #2d7eda;
 }
 
 
