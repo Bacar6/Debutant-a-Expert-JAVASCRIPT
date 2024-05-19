@@ -17,7 +17,7 @@ generateurNote = (event) => {
   // champResult.textContent = textInput;
   const creationDiv = document.createElement("div");
   const elementP = document.createElement("p");
-  elementP.textContent = textInput;
+  elementP.textContent = textInput.toUpperCase();
 
   // Fonction pour créer un bouton avec du texte et une action
   const creationButton = (text, action) => {

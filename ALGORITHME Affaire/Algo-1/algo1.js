@@ -14,7 +14,9 @@
 
 const multiplier = (a, b) => {
   let produit = a * b;
+
   let resultat = produit * a;
+
   return resultat;
 };
 

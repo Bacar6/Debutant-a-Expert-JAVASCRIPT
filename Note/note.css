@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #monForm {
   text-align: center;
@@ -14,6 +15,7 @@ h1 {
 /*NOTE - Class pour Styliser les Boutons partir de JavaScript   */
 
 .button {
+
   background-color: #2d7eda; /* Couleur de fond */
   color: white; /* Couleur du texte */
   padding: 10px 20px; /* Espacement à l'intérieur du bouton */
@@ -25,6 +27,7 @@ h1 {
   transition-duration: 0.50s;
 
   border: 2px solid #008CBA;
+
 }
 
 .button:hover {
@@ -32,8 +35,6 @@ h1 {
  background-color: white;
  color: #2d7eda;
 }
-
-
 
 
 
