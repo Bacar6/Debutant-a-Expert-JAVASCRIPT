@@ -1,0 +1,43 @@
+## 🗒️ Answer
+
+Votre code contient plusieurs erreurs qu'il faut corriger pour que la fonction retourne correctement la somme des nombres dans un tableau. Voici les erreurs identifiées et les corrections nécessaires :
+
+1. **Déclaration inutile à l'intérieur de la boucle** : La ligne `const monTableau = tableau[];` à l'intérieur de la boucle `for` est incorrecte et inutile. Vous ne devez pas redéclarer le tableau à chaque itération de la boucle.
+
+2. **Retour de la somme des éléments** : Vous devez initialiser une variable pour stocker la somme des éléments du tableau, et la mettre à jour à chaque itération de la boucle `for`.
+
+### Code corrigé
+
+Voici la version corrigée de votre fonction :
+
+```javascript
+const monTableau = [1, 2, 3];
+
+const sommeNombresTableau = (tableau) => {
+  let somme = 0; // Initialiser la variable pour stocker la somme
+  for (let i = 0; i < tableau.length; i++) {
+    somme += tableau[i]; // Ajouter chaque élément à la somme
+  }
+  return somme; // Retourner la somme totale
+};
+
+console.log(sommeNombresTableau(monTableau)); // Devrait afficher 6
+```
+
+### Explication des corrections
+
+1. **Initialisation de la somme** : La variable `somme` est initialisée à 0 avant de commencer à parcourir le tableau.
+2. **Boucle `for`** : La boucle `for` parcourt chaque élément du tableau en utilisant l'indice `i`.
+3. **Mise à jour de la somme** : À chaque itération, l'élément courant du tableau est ajouté à la variable `somme`.
+4. **Retour de la somme** : La fonction retourne la somme totale après avoir parcouru tous les éléments du tableau.
+
+### Résultat attendu
+
+L'exemple donné `[1, 2, 3]` doit retourner `6`, ce qui est vérifié par le `console.log` à la fin de votre code corrigé.
+
+## 🌐 Sources
+
+1. [Sentry - How to find the sum of an array of numbers](https://sentry.io/answers/how-to-find-the-sum-of-an-array-of-numbers/#:~:text=Using%20a%20for%20loop&text=const%20arr%20%3D%20%5B23%2C%2034,to%20a%20variable%20called%20sum%20.)
+2. [StackOverflow - How to find the sum of an array of numbers](https://stackoverflow.com/questions/1230233/how-to-find-the-sum-of-an-array-of-numbers/43400621)
+3. [FreeCodeCamp - JS Sum of an Array](https://www.freecodecamp.org/news/how-to-add-numbers-in-javascript-arrays/)
+4. [Educative.io - How to get the sum of an array in JavaScript](https://www.educative.io/answers/how-to-get-the-sum-of-an-array-in-javascript)
