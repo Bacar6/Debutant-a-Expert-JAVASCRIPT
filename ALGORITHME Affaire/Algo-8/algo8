@@ -1,0 +1,109 @@
+// EXERCICE 8
+
+// Crée une fonction qui prend en paramètre une string et qui doit retourner la string sans les voyelles.
+// Exemple : "Hello" => "Hll"
+// Pour cette exercice on va utiliser la méthode split() qui permet de transformer une string en tableau. Et la méthode filter() qui permet de filtrer un tableau :
+// const maString = "Hello"
+// const monTableau = maString.split("")
+// console.log(monTableau) // ["H", "e", "l", "l", "o"]
+// const monTableauFiltre = monTableau.filter((element) => {
+//   return element !== "e" && element !== "o"
+// })
+
+// CODE ICI  -------------------------------------------------------//
+
+// Fonction qui prend une string et retourne cette string sans les voyelles
+const stringSansVoyelles = (string) => {
+  // Diviser la chaîne en un tableau de caractères
+  const tableau = string.split("");
+
+  // Filtrer le tableau pour enlever les voyelles
+  const tableauFiltre = tableau.filter((element) => {
+    return !["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"].includes(
+      element
+    );
+  });
+
+  // Joindre les caractères restants en une nouvelle chaîne de caractères
+  return tableauFiltre.join("");
+};
+
+// Définir une chaîne de caractères
+const maString = "Hello";
+
+// Afficher le résultat de la fonction sans les voyelles
+console.log(stringSansVoyelles(maString)); // Devrait afficher "Hll"
+
+//----------------------------------------------------------------------------------------------//
+
+/*
+## 🗒️ Answer
+
+La fonction `filter()` permet de filtrer les éléments d'un tableau en fonction d'une condition spécifiée. Dans ce cas, nous utilisons cette fonction pour retirer les voyelles d'une chaîne de caractères. Voici une explication détaillée :
+
+### Explication détaillée
+
+1. **Diviser la chaîne en un tableau de caractères :**
+   ```javascript
+   const tableau = maString.split("");
+   ```
+   La méthode `split("")` divise la chaîne de caractères en un tableau où chaque élément est un caractère individuel de la chaîne.
+
+2. **Filtrer le tableau pour enlever les voyelles :**
+   ```javascript
+   const tableauFiltre = tableau.filter((element) => {
+     return !["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"].includes(element);
+   });
+   ```
+   La méthode `filter()` crée un nouveau tableau contenant seulement les éléments qui remplissent la condition spécifiée dans la fonction de rappel :
+   
+   - **Fonction de rappel :**
+     ```javascript
+     (element) => {
+       return !["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"].includes(element);
+     }
+     ```
+     Cette fonction vérifie si l'élément courant (`element`) n'est pas une voyelle. Elle utilise `includes()` pour vérifier si l'élément est dans la liste des voyelles.
+
+     - **`includes(element)` :** Vérifie si l'élément fait partie de la liste ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"].
+     - **`!includes(element)` :** Inverse le résultat, donc il retourne `true` seulement si l'élément n'est pas une voyelle.
+
+### Code complet
+
+Voici le code complet avec la partie de filtrage des voyelles :
+
+
+```javascript
+// Fonction qui prend une string et retourne cette string sans les voyelles
+const stringSansVoyelles = (string) => {
+  // Diviser la chaîne en un tableau de caractères
+  const tableau = string.split("");
+  
+  // Filtrer le tableau pour enlever les voyelles
+  const tableauFiltre = tableau.filter((element) => {
+    return !["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"].includes(element);
+  });
+  
+  // Joindre les caractères restants en une nouvelle chaîne de caractères
+  return tableauFiltre.join("");
+};
+
+// Définir une chaîne de caractères
+const maString = "Hello";
+
+// Afficher le résultat de la fonction sans les voyelles
+console.log(stringSansVoyelles(maString)); // Devrait afficher "Hll"
+```
+
+### Exemple
+
+Pour la chaîne `"Hello"` :
+- **`split("")`** donne : `["H", "e", "l", "l", "o"]`
+- **`filter()`** retire `"e"` et `"o"`, donnant : `["H", "l", "l"]`
+- **`join("")`** transforme `["H", "l", "l"]` en `"Hll"`
+
+### Conclusion
+
+La fonction `filter()` est utilisée ici pour créer un nouveau tableau sans les voyelles, en vérifiant chaque caractère et en le gardant uniquement s'il n'est pas une voyelle.
+
+*/
